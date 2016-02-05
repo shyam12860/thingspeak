@@ -12,8 +12,8 @@ Thingspeak::Application.configure do
 		:port => 587,
 		:domain => '',
 		:authentication => :plain,
-		:user_name => '',
-		:password => ''
+		:user_name => 'shyam12860@gmail.com',
+		:password => 'aragorn12860'
 	}
 end
 

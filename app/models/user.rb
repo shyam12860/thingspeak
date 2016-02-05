@@ -32,7 +32,7 @@
 ####################
 class User < ActiveRecord::Base
   include KeyUtilities
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+  devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
   has_many :channels, :dependent => :destroy
   has_many :twitter_accounts, :dependent => :destroy
   has_many :thinghttps, :dependent => :destroy

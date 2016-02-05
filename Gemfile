@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '4.0.5'
 gem 'jquery-rails', '3.0.4'
 gem 'rails_autolink'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 gem 'devise'
 gem 'twitter_oauth', git: 'git://github.com/moomerman/twitter_oauth.git'
 gem 'therubyracer'
@@ -38,7 +38,8 @@ gem 'tzinfo-data'
 gem 'turbolinks'
 gem 'geokit-rails'
 gem 'clockwork'
-
+gem 'eventmachine', '1.0.4'
+gem 'devise_invitable', '~> 1.5.2'
 # to use debugger
 # gem 'ruby-debug'
 

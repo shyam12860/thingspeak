@@ -19,9 +19,12 @@
 
 class AdminUser < ActiveRecord::Base
   # Include default devise modules. Others available are:
+  has_many :invitations, :class_name => 'User', :as => :invited_by
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  include DeviseInvitable::Inviter
 
   attr_accessor :login
 
