@@ -19,7 +19,7 @@ Thingspeak::Application.routes.draw do
 
   # devise for authentication
   # override devise controllers and use custom sessions_controller and registrations_controller
-  devise_for :users, :controllers => {:sessions => 'sessions', :registrations => 'registrations'}
+  devise_for :users, :controllers => {:sessions => 'sessions', :registrations => 'registrations', :invitations => 'invitations'}
 
   resource :pages do
     collection do

@@ -82,10 +82,14 @@ class ApplicationController < ActionController::Base
 
   protected
 
+    def authenticate_inviter!
+      authenticate_admin!(:force => true)
+    end
     def configure_permitted_parameters
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:login, :email, :password, :password_confirmation, :remember_me, :time_zone) }
       devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :email, :password, :remember_me) }
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:login, :email, :password, :password_confirmation, :time_zone, :password_current) }
+      # devise_parameter_sanitizer.for(:acce) { |u| u.permit(:login, :email, :invitation_token, :invitation_created_at, :invitation_sent_at, :invitation_accepted_at, :invitation_limit, :invited_by_id, :invited_by_type, :invitations_count) }
     end
 
   private

@@ -25,6 +25,15 @@ GIT
       oauth (>= 0.4.7)
 
 GIT
+  remote: git://github.com/scambra/devise_invitable.git
+  revision: 6f64b9c9512f60000673a1eca7ac263cb9c20546
+  branch: master
+  specs:
+    devise_invitable (1.5.5)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
+
+GIT
   remote: git://github.com/simplificator/rwebthumb.git
   revision: dbd96a62787201f7bf901c39c8df003a22b45ec9
   specs:
@@ -109,9 +118,6 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise_invitable (1.5.5)
-      actionmailer (>= 3.2.6, < 5)
-      devise (>= 3.2.0)
     diff-lcs (1.2.5)
     dynamic_form (1.1.4)
     easy_translate (0.5.0)
@@ -381,7 +387,7 @@ DEPENDENCIES
   dalli
   database_cleaner (~> 1.2.0)
   devise
-  devise_invitable (~> 1.5.2)
+  devise_invitable!
   dynamic_form
   em-http-request
   eventmachine (= 1.0.4)

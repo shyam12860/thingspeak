@@ -39,7 +39,8 @@ gem 'turbolinks'
 gem 'geokit-rails'
 gem 'clockwork'
 gem 'eventmachine', '1.0.4'
-gem 'devise_invitable', '~> 1.5.2'
+# gem 'devise_invitable', '~> 1.5.2'
+gem 'devise_invitable', :git => "git://github.com/scambra/devise_invitable.git", :branch => 'master'
 # to use debugger
 # gem 'ruby-debug'
 
