@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-  default :from => 'support@thingspeak.com'
+  default :from => 'shyam12860@gmail.com'
 
   def password_reset(user, webpage)
     @user = user

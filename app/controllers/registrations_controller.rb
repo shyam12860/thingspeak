@@ -5,7 +5,10 @@ class RegistrationsController < Devise::RegistrationsController
   # use defaults from devise
   def new; super; end
   def edit; super; end
-  def create; super; end
+  def create
+    # flash[:error] = "You may not sign up without an invitation from the admin!"
+    redirect_to new_user_registration_path, :alert => "You may not sign up without an invitation from the admin!"
+  end
 
   private
 

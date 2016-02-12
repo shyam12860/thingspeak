@@ -12,6 +12,9 @@ ActiveAdmin.register User do
     column :email
     column :login
     column :created_at
+    column :invited_by do |user|
+      AdminUser.find(user.invited_by).email
+    end
     actions
   end
 
@@ -53,7 +56,7 @@ ActiveAdmin.register User do
   end 
 
   collection_action :send_invitation, :method => :post do
-    @user = User.invite!({email: params[:user][:email], login: params[:user][:login]},current_user)
+    @user = User.invite!({email: params[:user][:email], login: params[:user][:login]},current_admin_user)
     if @user.errors.empty?
       flash[:success] = "User has been successfully invited." 
       redirect_to admin_users_path

@@ -19,9 +19,9 @@ en:
       invitation_instructions:
         subject: "Invitation instructions"
         hello: "Hello %{email}"
-        someone_invited_you: "Someone has invited you to %{url}, you can accept it through the link below."
+        someone_invited_you: "Someone has invited you to the thingspeak server at %{url}, you can accept it through the link below."
         accept: "Accept invitation"
-        accept_until: "This invitation will be due in %{due_date}."
+        accept_until: "This message will self-destruct in 5 seconds."
         ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
   time:
     formats:

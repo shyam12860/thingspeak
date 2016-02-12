@@ -31,6 +31,6 @@ class InvitationsController < Devise::InvitationsController
   private 
 
   def resource_params
-     params.permit(user: [:name, :email, :invitation_token, :password_confirmation, :password])[:user]
+     params.permit(user: [:login, :email, :invitation_token, :password_confirmation, :password])[:user]
    end
 end

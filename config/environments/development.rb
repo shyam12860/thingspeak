@@ -25,5 +25,16 @@ Thingspeak::Application.configure do
 
   config.assets.debug = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :domain => '',
+    :authentication => :plain,
+    :user_name => 'shyam12860@gmail.com',
+    :password => 'aragorn12860'
+  }
+
 end
 
