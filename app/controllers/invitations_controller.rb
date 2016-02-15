@@ -11,13 +11,16 @@ class InvitationsController < Devise::InvitationsController
     self.resource = resource_class.accept_invitation!(resource_params)
 
     if resource.errors.empty?
-      flash_message = resource.active_for_authentication? ? :updated : :updated_not_active                                                                                        
+      flash_message = resource.active_for_authentication? ? :updated_not_active : :updated                                                                                      
       set_flash_message :notice, flash_message
-      sign_in(resource_name, resource)
-
-      redirect_to '/login', :alert => "Welcome! Please login with your new password." 
+      # sign_in(resource_name, resource)
+      # puts "=============================123"
+      redirect_to '/login'
     else
-      respond_with_navigational(resource){ render :edit, :layout => true }
+      flash[:alert] = resource.errors.full_messages.to_sentence
+      puts "============================="
+      redirect_to accept_user_invitation_path(invitation_token: params[:user][:invitation_token])
+      # respond_with_navigational(resource){ render :edit, :layout => true, :invitation_token => params[:invitation_token] }
     end
   end
 

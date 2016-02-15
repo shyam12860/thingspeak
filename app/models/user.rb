@@ -140,7 +140,6 @@ class User < ActiveRecord::Base
     { :only => User.private_options[:only].push(array).flatten }
   end
 
-
   # set new api key
   def set_new_api_key!
     new_api_key = generate_api_key(16, 'user')
