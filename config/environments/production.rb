@@ -3,7 +3,16 @@ Thingspeak::Application.configure do
 
   # required by devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :domain => '',
+    :authentication => :plain,
+    :user_name => ENV['EMAIL'],
+    :password => ENV['PASSWORD']
+  }
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
