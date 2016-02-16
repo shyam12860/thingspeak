@@ -1,3 +1,4 @@
+.rbenv-vars
 /config/initializers/app_env_vars.rb
 log/*.log
 tmp/**/*
