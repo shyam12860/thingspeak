@@ -8,3 +8,6 @@ db/*.sqlite3
 .bundle
 .bundle/*
 *~
+
+# Ignore application configuration
+/config/application.yml

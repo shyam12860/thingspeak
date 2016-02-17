@@ -40,9 +40,13 @@ gem 'geokit-rails'
 gem 'clockwork'
 gem 'eventmachine', '1.0.4'
 # gem 'devise_invitable', '~> 1.5.2'
+
+#added after forking
 gem 'devise_invitable', :git => "git://github.com/scambra/devise_invitable.git", :branch => 'master'
 gem 'unicorn'
 gem 'authlogic'
+gem 'figaro'
+
 # to use debugger
 # gem 'ruby-debug'
 

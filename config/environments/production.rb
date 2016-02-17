@@ -10,8 +10,8 @@ Thingspeak::Application.configure do
     :port => 587,
     :domain => '',
     :authentication => :plain,
-    :user_name => ENV['EMAIL'],
-    :password => ENV['PASSWORD']
+    :user_name => ENV['GMAIL_USERNAME'],
+    :password => ENV['GMAIL_PASSWORD']
   }
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
