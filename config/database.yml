@@ -46,5 +46,5 @@ production:
   reconnect: true
   database: thingspeak_production
   pool: 5
-  username: root
-  password: 
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
