@@ -42,6 +42,7 @@ gem 'eventmachine', '1.0.4'
 # gem 'devise_invitable', '~> 1.5.2'
 gem 'devise_invitable', :git => "git://github.com/scambra/devise_invitable.git", :branch => 'master'
 gem 'unicorn'
+gem 'authlogic'
 # to use debugger
 # gem 'ruby-debug'
 
