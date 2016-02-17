@@ -32,8 +32,8 @@ Thingspeak::Application.configure do
     :port => 587,
     :domain => '',
     :authentication => :plain,
-    :user_name => ENV['EMAIL'],
-    :password => ENV['PASSWORD']
+    :user_name => ENV['GMAIL_USERNAME'],
+    :password => ENV['GMAIL_PASSWORD']
   }
 
 end
