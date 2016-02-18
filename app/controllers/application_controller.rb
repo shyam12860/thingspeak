@@ -51,8 +51,9 @@ class ApplicationController < ActionController::Base
     else
       # make sure https is specified in the redirect url if we're in the production environment
       # url = @ssl ? "#{domain}channels" : "#{domain}channels"
-      url = "#{domain}channels"
-      return url
+      # url = "#{domain}channels"
+      # return url
+      admin_channels_path
     end
   end
 
