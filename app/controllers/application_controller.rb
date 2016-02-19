@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
     if resource.is_a?(AdminUser)
       admin_dashboard_path
     else
-      # make sure https is specified in the redirect url if we're in the production environment
+      # make sure http is specified in the redirect url if we're in the production environment
       url = @ssl ? "#{domain}channels" : "#{domain}channels"
       return url
     end
@@ -195,23 +195,23 @@ class ApplicationController < ActionController::Base
       rescue
         u += '/'
       end
-      u = u.sub(/http:/, 'https:') if (Rails.env == 'production' and ssl)
+      u = u.sub(/http:/, 'http:') if (Rails.env == 'production' and ssl)
       return u
     end
 
     def ssl
-      (Rails.env == 'production') ? 'https' : 'http'
+      (Rails.env == 'production') ? 'http' : 'http'
     end
 
     # domain for the api
     def api_domain(ssl=false)
       output = (Rails.env == 'production') ? API_DOMAIN : domain
-      output = output.sub(/http:/, 'https:') if ssl == true
+      output = output.sub(/http:/, 'http:') if ssl == true
       return output
     end
 
     # ssl domain for the api
-    def ssl_api_domain; (Rails.env == 'production') ? api_domain.sub('http', 'https'): api_domain; end
+    def ssl_api_domain; (Rails.env == 'production') ? api_domain.sub('http', 'http'): api_domain; end
 
     # gets the api key
     def get_apikey
