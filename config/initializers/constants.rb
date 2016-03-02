@@ -6,13 +6,13 @@ GET_SUPPORT = true
 RATE_LIMIT = false
 
 # number of seconds to wait before a channel can be updated again
-RATE_LIMIT_FREQUENCY = '15'
+RATE_LIMIT_FREQUENCY = '5'
 
 # main production server to handle all requests (can be a proxy)
-APPLICATION_IP_ADDRESS = '127.0.0.1'
+APPLICATION_IP_ADDRESS = '173.236.253.79'
 
 # domain for the API
-API_DOMAIN = 'http://127.0.0.1:3000/'
+API_DOMAIN = 'http://thingspeak.rnoc.gatech.edu/'
 
 # get api key from HTTP headers if this value is present
 HTTP_HEADER_API_KEY_NAME = 'THINGSPEAKAPIKEY'
@@ -25,8 +25,7 @@ CONSUMER_KEY = ''
 CONSUMER_SECRET = ''
 
 # reset password base url
-RESET_PASSWORD_URL = 'http://127.0.0.1:3000//users/reset_password/'
+RESET_PASSWORD_URL = 'http://thingspeak.rnoc.gatech.edu//users/reset_password/'
 
 # allow only these additional locales (use downcase, easier to parse)
 ALLOWED_LOCALES = ['pt-br','it']
-
