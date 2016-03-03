@@ -451,6 +451,3 @@ DEPENDENCIES
   webrat
   will_paginate (~> 3.0.pre2)
   will_paginate-bootstrap
-
-BUNDLED WITH
-   1.10.4
